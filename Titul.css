@@ -1,0 +1,239 @@
+/*тело и основа */
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    color: #333333;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 15px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .Lor {
+    margin-top: 50px;
+    text-align: center;
+  }
+/*тело и основа */
+
+/*меню вверху */
+.navbar {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff; /* цвет фона */
+    padding: 20px 40px;         /* внутренние отступы */
+    margin: 30px auto;          /* отступы снаружи + центрирование */
+    width: fit-content;         /* ширина по содержимому */
+    border-radius: 15px;        /* скругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* лёгкая тень */
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    gap: 70px; /* расстояние между ссылками */
+  }
+  
+  .menu a,
+  .menu a:visited,
+  .menu a:hover,
+  .menu a:active {
+    text-decoration: none;
+    color: black;
+  }
+/*меню вверху */
+
+/*Ссылки под кнопки */
+  .Calk {
+    padding: 72px 228px;        /* вертикаль: 12px, горизонт: 40px */
+    border-radius: 30px;       /* скругление краёв */
+    background-color: black; /* цвет кнопки */
+    color: white;              /* цвет текста */
+    border: none;              /* убирает рамку */
+    font-size: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+/*Ссылки под кнопки */
+
+/* панель */
+.search-form{
+    padding: 72px 228px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        gap: 10px;
+        
+}
+#search-form-text {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 30px;
+    font-style: normal;
+    border-radius: 150px;
+    padding: 35px 500px 35px 20px;
+
+}
+.search-form button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;          /* идеально круглая */
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* панель */
+
+/*Адаптив под телефоны */
+  @media (min-width: 350px)  {
+    body {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 35px;
+          text-align: center;
+    }
+
+    button {
+        font-size: 30px;
+    }
+    .Calk {
+        font-size: 40px;
+        padding: 10px;
+        
+    }
+    .Lor {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      /* панель */
+.search-form{
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 5px;
+    max-width: 100%;
+    
+        
+}
+#search-form-text {
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    border-radius: 150px;
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 300px; /* ограничь ширину */
+    box-sizing: border-box;
+
+}
+.search-form button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;          /* идеально круглая */
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+/* панель */
+
+/*Ссылки под кнопки */
+.Calk {
+    padding: 18px 72px;        /* вертикаль: 12px, горизонт: 40px */
+    border-radius: 30px;       /* скругление краёв */
+    background-color: black; /* цвет кнопки */
+    color: white;              /* цвет текста */
+    border: none;              /* убирает рамку */
+    font-size: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+/*Ссылки под кнопки */
+}
+/*Адаптив под телефоны */
+
+/*Адаптив под ноутбуки */
+@media (min-width: 1000px)  {
+  body {
+      font-size: 50px;
+  }
+
+  h1 {
+      font-size: 120px;
+
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    
+  }
+
+  button {
+      font-size: 30px;
+  }
+  .Calk {
+
+      
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+
+      padding: 18px 70px;        /* вертикаль: 12px, горизонт: 40px */
+      border-radius: 30px;       /* скругление краёв */
+      background-color: black; /* цвет кнопки */
+      color: white;              /* цвет текста */
+      border: none;              /* убирает рамку */
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .Lor {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+  }
+
+
+
+
+/*Адаптив под ноутбуки */

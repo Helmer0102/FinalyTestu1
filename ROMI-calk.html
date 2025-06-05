@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="ROMI.HTML" content="width=device-width, initial-scale=1.0">
+    <title>ROMI-калькулятор</title>
+    <link rel="stylesheet" href="FormulaCss.css">
+    <style>
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .result {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<!--меню-->
+        <header class="navbar">
+        <nav class="menu">
+          <a href="AnalizMarketing.html">Види аналізу</a>
+          <a href="MetrixSpisok.html">Список метрик</a>
+          <a href="ProSute.html">Про сайт</a>
+        </nav>
+      </header>
+<!--меню-->
+
+    <!--Текст с формулой-->
+    <h1> ROMI </h1>
+    <p><span style="font-weight: 500;">ROMI (Return on marketing investment) </span> – це показник окупності витрат на <br>
+        маркетинг. Він показує, скільки прибутку компанія отримала з <br>
+        кожної вкладеної гривні у рекламу та просування. Розрахунок:
+      </p>
+   
+      <p><span style="font-weight: 700;">(Дохід - Витрати / Витрати) * 100%</span></p>
+<!--Текст с формулой-->
+
+<!--Косметика для калькулятора-->
+<div class="Calk2">
+    <label for="investment">Витрати:</label><br>
+    <input type="number" id="investment"><br>
+    <label for="roi">Дохід:</label><br>
+    <input type="number" id="roi"><br>
+    <button class="Calk" onclick="calculateROI()">Вычислить ROMI</button><br><br>
+    <div class="result" id="result"></div>
+
+<!--Косметика для калькулятора-->
+
+    <script>
+        function calculateROI() {
+            var investment = document.getElementById("investment").value;
+            var roi = document.getElementById("roi").value;
+            var result = ((roi - investment) / investment) * 100;
+            document.getElementById("result").textContent = "ROI: " + result.toFixed(2) + "%";
+        }
+    </script>
+</div>
+
+<div class="Lor">
+    <a href="index.html">
+        <button type="button" class="Calk" >Назад</button>
+        </a>
+</div>
+
+</body>
+</html>

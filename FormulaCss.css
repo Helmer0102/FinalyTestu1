@@ -1,0 +1,169 @@
+                                        /*тело и основа */
+body {  /*фон и прочее */
+  background-color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {  /*заголовки */
+    color: black;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+}
+p {   /*текст */
+      color: black;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-size: 20px;
+      font-style: normal;
+      text-align: center;
+      margin-top: 30px;
+  }
+  ul {   /*текст */
+      color: black;
+      text-align: center;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-size: 20px;
+      font-style: normal;
+      text-align: center;
+      margin-top: 30px;
+  }
+.Lor {  /*кнопка "назад" */
+    margin-top: 50px;
+    text-align: center;
+  }
+label{  /*названия полей калькулятора */
+    color: black;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 30px;
+  }
+                                        /*тело и основа */
+                                        
+                                        /*меню вверху */
+.navbar {  /*верхнее меню */
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff; 
+    padding: 20px 40px;         
+    margin: 30px auto;          
+    width: fit-content;         
+    border-radius: 15px;        
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+.menu {  /*ссылки меню */
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+  }  /*краска для ссылок меню */
+  .menu a,
+  .menu a:visited,
+  .menu a:hover,
+  .menu a:active {
+    text-decoration: none;
+    color: black;
+  }
+                                        /*меню вверху */
+
+                                        /*Косметика для калькулятора */
+  .Calk2 {  /*положение калькулятора */
+    margin-top: 30px;
+    text-align: center;
+    
+  }
+  input {  /*цифры калькулятора */
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 30px;
+    font-style: normal;
+    border-radius: 150px;
+  }
+  .result {  /*результат калькулятора */
+    font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-size: 20px;
+      font-style: normal;
+      text-align: center;
+      margin-top: 30px;
+  }
+
+
+
+                                         /*Адаптив под ноутбуки */
+@media (min-width: 1000px)  {
+  body {
+        font-size: 50px;
+    }
+  h1 {
+        font-size: 80px;
+  
+          font-family: "Raleway", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 500;
+          font-style: normal;
+    }
+  .Calk {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+      padding: 18px 70px;        
+      border-radius: 30px;       
+      background-color: black; 
+      color: white;              
+      border: none;              
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 50px;
+    }
+}
+                                         /*Адаптив под ноутбуки */
+                                         /*Адаптив под телефоны */
+@media (min-width: 700px)  {
+  body {
+        font-size: 50px;
+    }
+  h1 {
+        font-size: 80px;
+  
+          font-family: "Raleway", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 500;
+          font-style: normal;
+    }
+  .Calk {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+      padding: 18px 70px;        
+      border-radius: 30px;       
+      background-color: black; 
+      color: white;              
+      border: none;              
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 50px;
+    }
+}
+                                         /*Адаптив под телефоны */
