@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="CTR.HTML" content="width=device-width, initial-scale=1.0">
+    
+    <title>CTR-калькулятор</title>
+    <link rel="stylesheet" href="FormulaCss.css">
+    <style>
+        
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .result {
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<!--меню-->
+        <header class="navbar">
+        <nav class="menu">
+          <a href="AnalizMarketing.html">Види аналізу</a>
+          <a href="MetrixSpisok.html">Список метрик</a>
+          <a href="ProSute.html">Про сайт</a>
+        </nav>
+      </header>
+<!--меню-->
+
+    <h1> CTR </h1>
+    <p>
+        <span style="font-weight: 500;">CTR (Click-through rate)</span> – клікабельність. Метрика вказує <br>
+        на те, наскільки реклама прикметна для клієнтів, тобто <br>
+        наскільки часто на неї кликають. Розрахунок:
+      </p>
+
+      <p><span style="font-weight: 700;">(Кліки / Покази) * 100%</span></p>
+<!--Текст с формулой-->
+
+<!--Косметика для калькулятора-->
+<div class="Calk2">
+    <label>Покази:</label><br>
+    <input type="number" id="impressions"><br>
+    <label>Кліки:</label><br>
+    <input type="number" id="clicks"><br>
+    <button class="Calk" onclick="calculateCTR()">Розрахувати CTR</button>
+    <div class="result" id="ctrResult"></div>
+
+<!--Косметика для калькулятора-->
+
+<!--Калькулятор-->
+<script>
+ function calculateCTR() {
+        const clicks = parseFloat(document.getElementById("clicks").value);
+        const impressions = parseFloat(document.getElementById("impressions").value);
+        if (isNaN(clicks) || isNaN(impressions) || impressions === 0) {
+          document.getElementById("ctrResult").textContent = "Введите корректные значения.";
+          return;
+        }
+        const ctr = (clicks / impressions) * 100;
+        document.getElementById("ctrResult").textContent = "CTR: " + ctr.toFixed(2) + "%";
+      }
+</script>
+</div>
+
+
+<!--Калькулятор-->
+
+<div class="Lor">
+    <a href="index.html">
+        <button type="button" class="Calk" >Назад</button>
+        </a>
+</div>
+
+    
+</body>
+</html>

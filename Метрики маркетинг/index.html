@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Titul.css">
+    <title>Калькулятор</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="navbar">
+        <nav class="menu">
+          <a href="AnalizMarketing.html">Види аналізу</a>
+          <a href="MetrixSpisok.html">Список метрик</a>
+          <a href="ProSute.html">Про сайт</a>
+        </nav>
+      </header>
+
+    <h1>Що вас цікавить?</h1>
+
+    <!--Поиск-->
+    <div class="search-form"> 
+        <input type="text" id="search-form-text" placeholder="Знайти...">
+        <button onclick="search()">Пошук</button>
+        
+        <script>
+          function search() {
+            const query = document.getElementById("search-form-text").value.toLowerCase();
+        
+            if (query.includes("ctr")) {
+              window.location.href = "CTR-calk.html";
+        
+            } else if (query.includes("cpa")) {
+              window.location.href = "CPA-calk.html";
+        
+            } else if (query.includes("romi")) {
+                window.location.href = "ROMI-calk.html";
+            
+            } else if (query.includes("cpm")) {
+                window.location.href = "CPM-calk.html";
+
+            } else if (query.includes("cpc")) {
+                window.location.href = "CPC-calk.html";
+            
+            } else if (query.includes("swot")) {
+                window.location.href = "SWOTAnaliz.html";
+
+            } else if (query.includes("pest")) {
+                window.location.href = "PESTAnaliz.html";
+
+            } else if (query.includes("bcg")) {
+                window.location.href = "BCGAnaliz.html";
+
+            } else {
+              alert("Сторінка не знайдена");
+            }
+          }
+        </script>
+    </div>
+
+    <!--Поиск-->
+<P> Найпопулярніше</P>
+    <div class="Lor">
+            <a href="CTR-calk.html" class="Calk">CTR</a>
+            <a href="CPA-calk.html" class="Calk">CPA</a>
+            <a href="ROMI-calk.html" class="Calk">ROMI</a>
+    </div>
+</body>

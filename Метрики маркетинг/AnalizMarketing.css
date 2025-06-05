@@ -1,0 +1,86 @@
+                                        /*тело и основа */
+body {  /*фон и прочее */
+  background-color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {  /*заголовки */
+    color: black;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 80px;
+}
+p {   /*текст */
+      color: black;
+      text-align: left;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-size: 20px;
+      font-style: normal;
+      margin-top: 30px;
+  }
+  ul {   /*текст */
+      color: black;
+      text-align: left;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-size: 20px;
+      font-style: normal;
+      margin-top: 30px;
+  }
+  .centered-text {
+  max-width: 600px;       /* або 80%, якщо потрібно адаптивно */
+  margin: 0 auto;         /* центрування по горизонталі */
+  text-align: left;       /* вирівнювання тексту по лівому краю */
+  padding: 20px;          /* необов'язково: для простору всередині */
+}
+.Lor {  /*кнопка "назад" */
+    margin-top: 50px;
+    text-align: center;
+  }
+  .navbar {  /*верхнее меню */
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff; 
+    padding: 20px 40px;         
+    margin: 30px auto;          
+    width: fit-content;         
+    border-radius: 15px;        
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+.menu {  /*ссылки меню */
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+  }  /*краска для ссылок меню */
+  .menu a,
+  .menu a:visited,
+  .menu a:hover,
+  .menu a:active {
+    text-decoration: none;
+    color: black;
+  }
+    .Calk {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+      padding: 18px 70px;        
+      border-radius: 30px;       
+      background-color: black; 
+      color: white;              
+      border: none;              
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 50px;
+    }

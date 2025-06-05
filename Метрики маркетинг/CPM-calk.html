@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="CPM.HTML" content="width=device-width, initial-scale=1.0">
+    
+    <title>CPM-калькулятор</title>
+    <link rel="stylesheet" href="FormulaCss.css">
+    <style>
+        
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .result {
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<!--меню-->
+    <header class="navbar">
+        <nav class="menu">
+          <a href="AnalizMarketing.html">Види аналізу</a>
+          <a href="MetrixSpisok.html">Список метрик</a>
+          <a href="ProSute.html">Про сайт</a>
+        </nav>
+      </header>
+<!--меню-->
+
+    <h1> CPM </h1>
+    <p>
+        <span style="font-weight: 500;">CPM (cost per mille)</span> – вартість за 1000 показів.<br>
+        Метрика допомагає зрозуміти приблизну вартість охвату аудиторії, <br>
+        що є важливим, для оцінки та порівняння рекламних каналів, <br>
+        коли бюджет обмежений. Розрахунок:
+      </p>
+
+      <p><span style="font-weight: 700;">(Загальні витрати / Покази) * 100%</span></p>
+<!--Текст с формулой-->
+
+<!--Косметика для калькулятора-->
+<div class="Calk2">
+  <label>Загальні витрати:</label><br>
+  <input type="number" id="cost"><br>
+  <label>Кількість показів:</label><br>
+  <input type="number" id="impressionsCPM"><br>
+  <button class="Calk" onclick="calculateCPM()">Розрахувати CPM</button>
+  <div class="result" id="cpmResult"></div>
+</div>
+
+<!--Калькулятор CPM-->
+<script>
+  function calculateCPM() {
+    const cost = parseFloat(document.getElementById("cost").value);
+    const impressions = parseFloat(document.getElementById("impressionsCPM").value);
+
+    if (isNaN(cost) || isNaN(impressions) || impressions === 0) {
+      document.getElementById("cpmResult").textContent = "Введіть коректні значення.";
+      return;
+    }
+
+    const cpm = (cost / impressions) * 100;
+    document.getElementById("cpmResult").textContent = "CPM: " + cpm.toFixed(2) + " грн";
+  }
+</script>
+
+
+<div class="Lor">
+    <a href="index.html">
+        <button type="button" class="Calk" >Назад</button>
+        </a>
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="CPA.HTML" content="width=device-width, initial-scale=1.0">
+    <title>CPA-калькулятор</title>
+    <link rel="stylesheet" href="FormulaCss.css">
+    <style>
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .result {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<!--меню-->
+        <header class="navbar">
+        <nav class="menu">
+          <a href="AnalizMarketing.html">Види аналізу</a>
+          <a href="MetrixSpisok.html">Список метрик</a>
+          <a href="ProSute.html">Про сайт</a>
+        </nav>
+      </header>
+<!--меню-->
+
+    <!--Текст с формулой-->
+    <h1> CPA</h1>
+    <p><span style="font-weight: 500;">CPA (Cost per action)</span> – вартість за дію. Показує, скільки <br>
+    рекламодавець платить за кожну конкретну дію <br>
+    користувача: покупку, реєстрацію. Розрахунок::
+  </p>
+   
+  <p><span style="font-weight: 700;">Загальні витрати / кількість цільових дій</span></p>
+<!--Текст с формулой-->
+
+<div class="Calk2">
+    <label>Загальні витрати:</label><br>
+    <input type="number" id="totalCost"><br>
+    <label>Кількість цільових дій:</label><br>
+    <input type="number" id="conversions"><br>
+    <button class="Calk" onclick="calculateCPA()">Розрахувати CPA</button>
+    <div class="result" id="cpaResult"></div>
+
+    <script>
+         function calculateCPA() {
+      const totalCost = parseFloat(document.getElementById("totalCost").value);
+      const conversions = parseFloat(document.getElementById("conversions").value);
+      if (isNaN(totalCost) || isNaN(conversions) || conversions === 0) {
+        document.getElementById("cpaResult").textContent = "Введите корректные значения.";
+        return;
+      }
+      const cpa = totalCost / conversions;
+      document.getElementById("cpaResult").textContent = "CPA: " + cpa.toFixed(2) + " грн";
+    }
+    </script>
+</div>
+<div class="Lor">
+    <a href="index.html">
+        <button type="button" class="Calk" >Назад</button>
+        </a>
+</div>
+</body>
+</html>

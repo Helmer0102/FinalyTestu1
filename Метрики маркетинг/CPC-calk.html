@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="CPC.HTML" content="width=device-width, initial-scale=1.0">
+    
+    <title>CPC-калькулятор</title>
+    <link rel="stylesheet" href="FormulaCss.css">
+    <style>
+        
+        input, button {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .result {
+            font-size: 24px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<!--меню-->
+    <header class="navbar">
+        <nav class="menu">
+          <a href="AnalizMarketing.html">Види аналізу</a>
+          <a href="MetrixSpisok.html">Список метрик</a>
+          <a href="ProSute.html">Про сайт</a>
+        </nav>
+      </header>
+<!--меню-->
+
+    <h1> CPC </h1>
+    <p>
+        <span style="font-weight: 500;">CPC (Cost-per-click)</span> – вартість одного кліку по рекламі.<br>
+        Метрика допомагає зрозуміти, скільки бізнес витрачає за 1 клік по його рекламі <br>
+        що є важливим, для оцінки ефективності. Розрахунок:<br>
+      </p>
+
+      <p><span style="font-weight: 700;">Загальні витрати / Кількість кліків</span></p>
+<!--Текст с формулой-->
+
+<!--Косметика для калькулятора CPC-->
+<div class="Calk2">
+  <label>Загальні витрати:</label><br>
+  <input type="number" id="costCPC"><br>
+  <label>Кількість кліків:</label><br>
+  <input type="number" id="clicksCPC"><br>
+  <button class="Calk" onclick="calculateCPC()">Розрахувати CPC</button>
+  <div class="result" id="cpcResult"></div>
+</div>
+
+<!--JavaScript для калькулятора CPC-->
+<script>
+  function calculateCPC() {
+    const cost = parseFloat(document.getElementById("costCPC").value);
+    const clicks = parseFloat(document.getElementById("clicksCPC").value);
+
+    if (isNaN(cost) || isNaN(clicks) || clicks === 0) {
+      document.getElementById("cpcResult").textContent = "Введіть коректні значення.";
+      return;
+    }
+
+    const cpc = cost / clicks;
+    document.getElementById("cpcResult").textContent = "CPC: " + cpc.toFixed(2).replace(".", ",") + " грн";
+  }
+</script>
+
+<div class="Lor">
+    <a href="index.html">
+        <button type="button" class="Calk" >Назад</button>
+        </a>
+</div>
+</body>
+</html>
